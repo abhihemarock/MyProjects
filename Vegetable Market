@@ -1,0 +1,181 @@
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+class Vegetablemarket
+{ public:
+      int n,amt1=0,amt2=0,amt3=0,amt4=0,amt5=0;
+      int total_amount=0;
+   void start()
+   {
+    cout<<"scarcity of your items"<<"\n"<<"items not found";
+
+
+   }
+   void Tomatoes()
+   {
+     cin>>n;
+     cout<<"we are checking the availability"<<"\n"<<"please wait........"<<"\n"<<"\n"<<"\n";
+     if(n>=5&&n<=15)
+     {
+       cout<<"items found"<<"\n"<<"your order will be placed.";
+       amt1=50*n;
+       cout<<"\n"<<"your total amount is: Rs"<<amt1;
+       cout<<"\n"<<"Thank you";
+     }
+     else
+     {
+       start();
+
+     }
+   }
+    void potato()
+   {  cin>>n;
+     cout<<"we are checking the availability"<<"\n"<<"please wait........"<<"\n"<<"\n"<<"\n";
+     if(n>=5&&n<=15)
+     {
+         cout<<"items found"<<"\n"<<"your order will be placed.";
+       amt2=40*n;
+       cout<<"\n"<<"your total amount is: Rs"<<amt2;
+       cout<<"\n"<<"Thank you";
+     }
+     else
+     {
+       start();
+
+     }
+   }
+    void chillies()
+   {
+       cin>>n;
+     cout<<"we are checking the availability"<<"\n"<<"please wait........"<<"\n"<<"\n"<<"\n";
+     if(n>=5&&n<=15)
+     {
+         cout<<"items found"<<"\n"<<"your order will be placed.";
+       amt3=80*n;
+       cout<<"\n"<<"your total amount is: Rs"<<amt3;
+       cout<<"\n"<<"Thank you";
+     }
+     else
+     {
+       start();
+
+     }
+   }
+    void brinjal()
+   {
+      cin>>n;
+     cout<<"we are checking the availability"<<"\n"<<"please wait........"<<"\n"<<"\n"<<"\n";
+     if(n>=5&&n<=15)
+     {
+         cout<<"items found"<<"\n"<<"your order will be placed.";
+       amt4=60*n;
+       cout<<"\n"<<"your total amount is: Rs"<<amt4;
+       cout<<"\n"<<"Thank you";
+     }
+     else
+     {
+       start();
+
+     }
+   }
+    void greenpeas()
+   {  cin>>n;
+     cout<<"we are checking the availability"<<"\n"<<"please wait........"<<"\n"<<"\n"<<"\n";
+     if(n>=5&&n<=15)
+     {
+         cout<<"items found"<<"\n"<<"your order will be placed.";
+     amt5=80*n;
+       cout<<"\n"<<"your total amount is: Rs"<<amt5;
+       cout<<"\n"<<"Thank you";
+     }
+     else
+     {
+       start();
+
+     }
+   }
+   void Total_amount()
+   {
+       total_amount=amt1+amt2+amt3+amt4+amt5;
+       cout<<"the total amount of your items is:"<<total_amount<<endl;
+   }
+
+};
+int main()
+{   Vegetablemarket v;
+    while(1)
+{
+    int n;
+    cout<<"\n"<<"\n";
+    cout<<"\t"<<"*****Welcome to MAA vegetable market*****"<<endl;
+    cout<<"MENU"<<endl;;
+    cout<<"1.Tomato,2.potato,3.chillies,4.brinjal,5.greenpeas,6.total amount,7.exit"<<endl;
+    cout<<"enter your choice"<<endl;
+    cin>>n;
+
+    switch(n)
+    {
+        case 1:
+            {
+                cout<<"the rate of a kilo tomatoes is: Rs 50.";
+                cout<<"\n"<<"how many kilos do you want"<<endl;
+                v.Tomatoes();
+                break;
+
+            }
+
+        case 2:
+            {
+                 cout<<"the rate of a kilo potato is: Rs 40.";
+                  cout<<"\n"<<"how many kilos do you want"<<endl;
+                v.potato();
+                 break;
+            }
+
+
+        case 3:
+            {
+                 cout<<"the rate of a kilo chillies is: Rs 80.";
+                 cout<<"\n"<<"how many kilos do you want"<<endl;
+                v.chillies();
+                 break;
+            }
+
+
+        case 4:
+            {
+                 cout<<"the rate of a kilo brinjal is: Rs 60.";
+                 cout<<"\n"<<"how many kilos do you want"<<endl;
+                v.brinjal();
+                 break;
+            }
+
+
+        case 5:
+            {
+                 cout<<"the rate of a kilo greenpeas is: Rs 80.";
+                cout<<"\n"<<"how many kilos do you want"<<endl;
+                v.greenpeas();
+                 break;
+            }
+        case 6:
+            {
+                v.Total_amount();
+                break;
+            }
+        case 7:
+            {
+             exit(0);
+              break;
+            }
+        default:
+            {
+                cout<<"please enter the correct choice ";
+                break;
+
+            }
+
+    }
+    }
+
+}
